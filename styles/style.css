@@ -14,29 +14,26 @@ body{
 }
 
 
-
-section{
-    display: block;
+main{
+    display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: 15vh auto;
+    width: 300px;
+    margin: 20vh auto;
     background-color: grey;
     text-align: center;
     border: 5px solid black;
 }
-section .resultado{
-    width: 390px;
-    height: 30px;
+main .resultado{
     background-color: white;
+    padding: 10px;
 }
 .grid-container{
-    justify-content: center;
     display: grid;
-    grid-template-columns: 2px 2px 2px 2px 2px;
-    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
 }
 .grid-container a{
+    padding: 30px 15px;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
+    border: 2px solid black;
 }
