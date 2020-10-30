@@ -13,24 +13,30 @@ body{
     color: white;
 }
 
-main{
-    display: flex;
+
+
+section{
+    display: block;
     flex-direction: column;
-    width: 500px;
-    padding: 20px;
+    width: 400px;
     margin: 15vh auto;
     background-color: grey;
     text-align: center;
+    border: 5px solid black;
 }
-.h1{
-    justify-content: center;
+section .resultado{
+    width: 390px;
+    height: 30px;
+    background-color: white;
 }
-
-
 .grid-container{
     justify-content: center;
-    padding: 100px;
     display: grid;
     grid-template-columns: 2px 2px 2px 2px 2px;
     grid-gap: 80px;
+}
+.grid-container a{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
 }
