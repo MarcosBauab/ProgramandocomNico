@@ -3,14 +3,34 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
     background: blue;
 }
+#Título{
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
 main{
     display: flex;
-    width: 600px;
-    padding: 100px;
-    margin: 30vh auto;
-    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    margin: 15vh auto;
     background-color: grey;
+    text-align: center;
+}
+.h1{
+    justify-content: center;
+}
+
+
+.grid-container{
+    justify-content: center;
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 2px 2px 2px 2px 2px;
+    grid-gap: 80px;
 }
