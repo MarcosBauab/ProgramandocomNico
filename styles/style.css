@@ -7,7 +7,7 @@
 body{
     background: blue;
 }
-#Título{
+#titulo{
     text-align: center;
     padding: 15px;
     color: white;
@@ -20,12 +20,14 @@ main{
     width: 300px;
     margin: 20vh auto;
     background-color: grey;
-    text-align: center;
+    text-align: left;
     border: 5px solid black;
 }
 main .resultado{
     background-color: white;
     padding: 10px;
+    outline: none;
+    border: 0;
 }
 .grid-container{
     display: grid;
