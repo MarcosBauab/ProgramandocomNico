@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    width: 600px;
+    padding: 100px;
+    margin: 30vh auto;
+    justify-content: center;
+    background-color: grey;
+}
