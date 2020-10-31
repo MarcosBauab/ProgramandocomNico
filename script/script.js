@@ -1,6 +1,24 @@
-var p = document.querySelector(".resultado")
+/*function salvar(){
+    resultado = input.value
 
+    for (let i = 0; i < resultado.length;i++){
 
+        if (isNaN(resultado[i])){
+        operador.push(resultado[i])
+        contador.push(i)
+        }
+
+        else{
+        numero.push(resultado[i])
+        }
+  
+    }
+
+}
+
+console.log(operador)
+console.log(contador)
+console.log(numero)
 
 
 
