@@ -20,8 +20,22 @@ function teclaPressionada(e) {
         case "NumpadSubtract":
             p.innerHTML += `-`
             break;
+        case "NumpadDivide":
+            p.innerHTML += `/`
+            break;
+        case "NumpadAdd":
+            p.innerHTML += `+`
+            break;
+        case "NumpadComma":
+            p.innerHTML += `.`
+            break;
+        case "NumpadDecimal":
+            p.innerHTML += `.`
+            break;
+        case "KeyC":
+            p.innerHTML = ``
+            break;
         case "Backspace":
-            p.innerHTML -= `*`
             var myStr = p.innerHTML
             myStr = myStr.slice(0, -1);
             p.innerHTML = myStr
