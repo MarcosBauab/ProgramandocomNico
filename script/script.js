@@ -1,3 +1,48 @@
+var p = document.querySelector(".resultado")
+document.addEventListener("keydown", teclaPressionada)
+function teclaPressionada(e) {
+    //p.innerHTML += `${e.code}`
+    for(var i = 0; i < 10; i++){
+        if(e.code == `Numpad${i}`){
+            p.innerHTML += `${i}`
+        }
+        if(e.code == `Digit${i}`){
+
+            p.innerHTML += `${i}`
+        }
+    } 
+
+
+   switch (e.code) {
+        case "NumpadMultiply":
+            p.innerHTML += `*`
+            break;
+        case "NumpadSubtract":
+            p.innerHTML += `-`
+            break;
+        case "Backspace":
+            p.innerHTML -= `*`
+            var myStr = p.innerHTML
+            myStr = myStr.slice(0, -1);
+            p.innerHTML = myStr
+            break;
+        case "Enter":
+            calcular()
+            break;
+        
+        
+        default:
+            break;
+    }  
+    
+}
+
+function calcular(){
+    var conta = eval(p.innerHTML)
+    p.innerHTML = conta
+}
+
+
 /*function salvar(){
     resultado = input.value
 
