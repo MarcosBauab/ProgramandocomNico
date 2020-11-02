@@ -1,3 +1,4 @@
+
 var p = document.querySelector(".resultado")
 document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
@@ -21,7 +22,6 @@ function teclaPressionada(e) {
         case "NumpadDivide":
             p.innerHTML += `/`
             break;
-<<<<<<< HEAD
         
         case "NumpadAdd":
             p.innerHTML += `+`
@@ -42,20 +42,6 @@ function teclaPressionada(e) {
             p.innerHTML += ``
             break;
             
-=======
-        case "NumpadAdd":
-            p.innerHTML += `+`
-            break;
-        case "NumpadComma":
-            p.innerHTML += `.`
-            break;
-        case "NumpadDecimal":
-            p.innerHTML += `.`
-            break;
-        case "KeyC":
-            p.innerHTML = ``
-            break;
->>>>>>> e689fc9063d2b13cad6aa2e98cf56251ea5df548
         case "Backspace":
             var myStr = p.innerHTML
             myStr = myStr.slice(0, -1);
