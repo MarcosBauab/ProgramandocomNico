@@ -1,7 +1,6 @@
 var p = document.querySelector(".resultado")
 document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
-    //p.innerHTML += `${e.code}`
     for(var i = 0; i < 10; i++){
         if(e.code == `Numpad${i}`){
             p.innerHTML += `${i}`
@@ -11,8 +10,7 @@ function teclaPressionada(e) {
             p.innerHTML += `${i}`
         }
     } 
-
-
+ 
    switch (e.code) {
         case "NumpadMultiply":
             p.innerHTML += `*`
@@ -20,8 +18,45 @@ function teclaPressionada(e) {
         case "NumpadSubtract":
             p.innerHTML += `-`
             break;
+        case "NumpadDivide":
+            p.innerHTML += `/`
+            break;
+<<<<<<< HEAD
+        
+        case "NumpadAdd":
+            p.innerHTML += `+`
+            break;
+        
+        case "NumpadComma":
+            p.innerHTML += `.`
+            break;
+        
+        case "NumpadDecimal":
+            p.innerHTML += `.`
+            break;
+        
+        case "Digitc":
+            p.innerHTML += ``
+            break;
+        case "DigitC":
+            p.innerHTML += ``
+            break;
+            
+=======
+        case "NumpadAdd":
+            p.innerHTML += `+`
+            break;
+        case "NumpadComma":
+            p.innerHTML += `.`
+            break;
+        case "NumpadDecimal":
+            p.innerHTML += `.`
+            break;
+        case "KeyC":
+            p.innerHTML = ``
+            break;
+>>>>>>> e689fc9063d2b13cad6aa2e98cf56251ea5df548
         case "Backspace":
-            p.innerHTML -= `*`
             var myStr = p.innerHTML
             myStr = myStr.slice(0, -1);
             p.innerHTML = myStr
@@ -34,13 +69,36 @@ function teclaPressionada(e) {
         default:
             break;
     }  
-    
 }
 
 function calcular(){
     var conta = eval(p.innerHTML)
     p.innerHTML = conta
 }
+
+function escrever(num){
+
+    p.innerHTML += num
+}
+
+function apagar(){
+    let texto = p.innerHTML
+    texto = texto.slice(0,-1)
+    p.innerHTML = texto
+}
+
+function igual(){
+    if (p.innerHTML == ""){
+        p.innerHTML = ""
+    }
+    else{
+    calcular()
+}}
+
+function c(){
+    p.innerHTML = ""
+}
+
 
 
 /*function salvar(){
