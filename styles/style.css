@@ -2,15 +2,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: verdana;
 }
-
+html{
+    height: 100%;
+}
 body{
-    background: blue;
-    background: linear-gradient(rgba(0, 0, 255, 0.699),rgba(228, 171, 64, 0.801));
+    background: linear-gradient(rgba(192, 69, 230, 0.699),rgba(228, 116, 64, 0.801));
+    height: 100%;
+    overflow-y: hidden;
 }
 #titulo{
     text-align: center;
     padding: 15px;
+    margin-top: 10vh;
     color: white;
 }
 
@@ -18,35 +23,68 @@ body{
 main{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 300px;
-    margin: 20vh auto;
-    background-color: grey;
+    margin: 5vh auto;
+    background: linear-gradient(to right, rgb(80, 80, 80), rgba(0, 0, 0, 0.719));
     text-align: left;
-    border: 5px solid rgba(0, 0, 0, 0.624);
+    box-shadow: 15px 15px 20px 2px rgba(0, 0, 0, 0.671);
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    min-height: 350px;
 }
 main .resultado{
-    background-color: white;
-    padding: 20px;
+    background-color: rgba(133, 197, 133, 0.815);
+    padding: 15px;
+    height: 50px;
     outline: none;
     border: 0;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 .grid-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 }
 .grid-container a{
-    padding: 30px 25px;
+    padding: 10px;
     cursor: pointer;
-    background-size: 50% auto;
-    width: 15px;
-    height: 50%;
-    background-color: rgba(0, 0, 0, 0.323);
+    background-color: rgb(116, 116, 116);
     border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    transition: .3s;
+    width: 22.5%;
+}
+.grid-container a:hover{
+    background-color: orange !important;
 }
 
 a.valorc{
     background: orange;
+}
+.valor{
+    background: black !important;
+}
+
+/*Aside*/
+aside{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+}
+aside p{
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    transition: .3s;
+}
+aside p:hover{
+    background-color: orange;
 }

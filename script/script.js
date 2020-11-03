@@ -74,7 +74,6 @@ function calcular(){
 }
 
 function escrever(num){
-
     p.innerHTML += num
 }
 
@@ -87,10 +86,10 @@ function apagar(){
 function igual(){
     if (p.innerHTML == ""){
         p.innerHTML = ""
+    }else{
+        calcular()
     }
-    else{
-    calcular()
-}}
+}
 
 function c(){
     p.innerHTML = ""
