@@ -21,7 +21,6 @@ function teclaPressionada(e) {
         case "NumpadDivide":
             p.innerHTML += `/`
             break;
-<<<<<<< HEAD
         
         case "NumpadAdd":
             p.innerHTML += `+`
@@ -42,7 +41,6 @@ function teclaPressionada(e) {
             p.innerHTML += ``
             break;
             
-=======
         case "NumpadAdd":
             p.innerHTML += `+`
             break;
@@ -55,7 +53,6 @@ function teclaPressionada(e) {
         case "KeyC":
             p.innerHTML = ``
             break;
->>>>>>> e689fc9063d2b13cad6aa2e98cf56251ea5df548
         case "Backspace":
             var myStr = p.innerHTML
             myStr = myStr.slice(0, -1);

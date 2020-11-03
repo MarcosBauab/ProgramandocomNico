@@ -2,17 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: cursive;
 }
 
 body{
+    background: blue;
     background: linear-gradient(rgba(0, 0, 255, 0.699),rgba(228, 171, 64, 0.801));
 }
 #titulo{
     text-align: center;
     padding: 15px;
-    margin-top: 10vh;
-    color: rgba(255, 255, 255, 0.774);
+    color: white;
 }
 
 
@@ -20,24 +19,34 @@ main{
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin: 10vh auto;
+    margin: 20vh auto;
     background-color: grey;
     text-align: left;
-    border: 5px solid black;
+    border: 5px solid rgba(0, 0, 0, 0.624);
 }
 main .resultado{
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     outline: none;
     border: 0;
+    border-radius: 10px 10px 10px 10px;
 }
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     text-align: center;
+
 }
 .grid-container a{
-    padding: 30px 15px;
+    padding: 30px 25px;
     cursor: pointer;
-    border: 2px solid black;
+    background-size: 50% auto;
+    width: 15px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.323);
+    border-radius: 5px;
+}
+
+a.valorc{
+    background: orange;
 }
