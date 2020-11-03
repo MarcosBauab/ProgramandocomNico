@@ -2,15 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: cursive;
 }
 
 body{
-    background: blue;
+    background: linear-gradient(rgba(0, 0, 255, 0.699),rgba(228, 171, 64, 0.801));
 }
 #titulo{
     text-align: center;
     padding: 15px;
-    color: white;
+    margin-top: 10vh;
+    color: rgba(255, 255, 255, 0.774);
 }
 
 
@@ -18,7 +20,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin: 20vh auto;
+    margin: 10vh auto;
     background-color: grey;
     text-align: left;
     border: 5px solid black;
