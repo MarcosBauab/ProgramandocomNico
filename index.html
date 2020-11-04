@@ -8,42 +8,81 @@
     <title>Calculadora animada!</title>
 </head>
 <body>
-    <h1 id="titulo">calculadora básica</h1>
-    
-        
-        <main>  
-            <p class="resultado"></p>
-            <div class="grid-container" id="botao" >
-                <a class="valor7" onclick="escrever('7')">7</a>
-                <a class="valor8" onclick="escrever('8')">8</a>
-                <a class="valor9" onclick="escrever('9')">9</a>
-    
-                <a class="valor" onclick="escrever('+')">+</a>
-                <a class="valor4" onclick="escrever('4')">4</a>
-                <a class="valor5" onclick="escrever('5')">5</a>
-                <a class="valor6" onclick="escrever('6')">6</a>
-                <a class="valor" onclick="escrever('-')">-</a>
+    <div class="container-calculadoras">
+        <div id="basica">
+            <h1 id="titulo">calculadora básica</h1>        
+                <main>  
+                    <p class="resultado"></p>
+                    <div class="grid-container" id="botao" >
+                        <a class="valor7" onclick="escrever('7')">7</a>
+                        <a class="valor8" onclick="escrever('8')">8</a>
+                        <a class="valor9" onclick="escrever('9')">9</a>
+            
+                        <a class="valor" onclick="escrever('+')">+</a>
+                        <a class="valor4" onclick="escrever('4')">4</a>
+                        <a class="valor5" onclick="escrever('5')">5</a>
+                        <a class="valor6" onclick="escrever('6')">6</a>
+                        <a class="valor" onclick="escrever('-')">-</a>
 
-                <a class="valor1"  onclick="escrever('1')">1</a>
-                <a class="valor2" onclick="escrever('2')">2</a>
-                <a class="valor3"  onclick="escrever('3')">3</a>
-                <a class="valor" onclick="escrever('*')">x</a>
-                <a class="valorc" onclick="c()">C</a>
-                <a class="zero" onclick="escrever('0')">0</a>
+                        <a class="valor1"  onclick="escrever('1')">1</a>
+                        <a class="valor2" onclick="escrever('2')">2</a>
+                        <a class="valor3"  onclick="escrever('3')">3</a>
+                        <a class="valor" onclick="escrever('*')">x</a>
+                        <a class="valorc" onclick="c()">C</a>
+                        <a class="zero" onclick="escrever('0')">0</a>
 
-                <a class='ponto' onclick="escrever('.')"><strong>.</strong> </a>
+                        <a class='ponto' onclick="escrever('.')"><strong>.</strong> </a>
 
-                <a class="valor" onclick="escrever('/')"><i class="fas fa-divide"></i></a>
-                <a class="apagar" onclick="apagar()"> del</a>
+                        <a class="valor" onclick="escrever('/')"><i class="fas fa-divide"></i></a>
+                        <a class="apagar" onclick="apagar()"> del</a>
 
-                <a class="valorreseta" onclick="igual()" style="width:190px;">=</a>
+                        <a class="valorreseta" onclick="igual()" style="width:190px;">=</a>
 
+                    </div>
+                </main>
+
+                <aside onclick="animarEsquerda()" id="direita">
+                    <p><i class="fas fa-arrows-alt-h"></i></p>
+                </aside>
             </div>
-        </main>
+            <!-- Outra calculadora -->
+            <div id="cientifica">
+                <h1 id="titulo">calculadora científica</h1>        
+                <aside id="esquerda" onclick="animarDireita()">
+                    <p><i class="fas fa-arrows-alt-h"></i></p>
+                </aside>
+                <main>  
+                    <p class="resultado2"></p>
+                    <div class="grid-container" id="botao" >
+                        <a class="valor7" onclick="escrever('7')">7</a>
+                        <a class="valor8" onclick="escrever('8')">8</a>
+                        <a class="valor9" onclick="escrever('9')">9</a>
+            
+                        <a class="valor" onclick="escrever('+')">+</a>
+                        <a class="valor4" onclick="escrever('4')">4</a>
+                        <a class="valor5" onclick="escrever('5')">5</a>
+                        <a class="valor6" onclick="escrever('6')">6</a>
+                        <a class="valor" onclick="escrever('-')">-</a>
 
-        <aside>
-            <p><i class="fas fa-arrows-alt-h"></i></p>
-        </aside>
+                        <a class="valor1"  onclick="escrever('1')">1</a>
+                        <a class="valor2" onclick="escrever('2')">2</a>
+                        <a class="valor3"  onclick="escrever('3')">3</a>
+                        <a class="valor" onclick="escrever('*')">x</a>
+                        <a class="valorc" onclick="c()">C</a>
+                        <a class="zero" onclick="escrever('0')">0</a>
+
+                        <a class='ponto' onclick="escrever('.')"><strong>.</strong> </a>
+
+                        <a class="valor" onclick="escrever('/')"><i class="fas fa-divide"></i></a>
+                        <a class="apagar" onclick="apagar()"> del</a>
+
+                        <a class="valorreseta" onclick="igual()" style="width:190px;">=</a>
+
+                    </div>
+                </main>
+            </div>
+        </div>
+        
         
     <script src="script/script.js"></script>
     <script src="script/all.min.js"></script>

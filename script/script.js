@@ -1,12 +1,15 @@
 var p = document.querySelector(".resultado")
+var p2 = document.querySelector(".resultado2")
 document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
     for(var i = 0; i < 10; i++){
         if(e.code == `Numpad${i}`){
             p.innerHTML += `${i}`
+            p2.innerHTML += `${i}`
+
         }
         if(e.code == `Digit${i}`){
-
+            p2.innerHTML += `${i}`
             p.innerHTML += `${i}`
         }
     } 
@@ -14,49 +17,75 @@ function teclaPressionada(e) {
    switch (e.code) {
         case "NumpadMultiply":
             p.innerHTML += `*`
+            p2.innerHTML += `*`
+
             break;
         case "NumpadSubtract":
             p.innerHTML += `-`
+            p2.innerHTML += `-`
+
             break;
         case "NumpadDivide":
             p.innerHTML += `/`
+            p2.innerHTML += `/`
+
             break;
         
         case "NumpadAdd":
             p.innerHTML += `+`
+            p2.innerHTML += `+`
+
             break;
         
         case "NumpadComma":
             p.innerHTML += `.`
+            p2.innerHTML += `.`
+
             break;
         
         case "NumpadDecimal":
             p.innerHTML += `.`
+            p2.innerHTML += `.`
+
             break;
         
         case "Digitc":
             p.innerHTML += ``
+            p2.innerHTML += ``
+
             break;
         case "DigitC":
             p.innerHTML += ``
+            p2.innerHTML += ``
+
             break;
             
         case "NumpadAdd":
             p.innerHTML += `+`
+            p2.innerHTML += `+`
+
             break;
         case "NumpadComma":
             p.innerHTML += `.`
+            p2.innerHTML += `.`
+
             break;
         case "NumpadDecimal":
             p.innerHTML += `.`
+            p2.innerHTML += `.`
+
             break;
         case "KeyC":
             p.innerHTML = ``
+            p2.innerHTML = ``
+
             break;
         case "Backspace":
             var myStr = p.innerHTML
             myStr = myStr.slice(0, -1);
             p.innerHTML = myStr
+            p2.innerHTML = myStr
+
             break;
         case "Enter":
             calcular()
@@ -71,21 +100,29 @@ function teclaPressionada(e) {
 function calcular(){
     var conta = eval(p.innerHTML)
     p.innerHTML = conta
+    p2.innerHTML = conta
+
 }
 
 function escrever(num){
     p.innerHTML += num
+    p2.innerHTML += num
+
 }
 
 function apagar(){
     let texto = p.innerHTML
     texto = texto.slice(0,-1)
     p.innerHTML = texto
+    p2.innerHTML = texto
+
 }
 
 function igual(){
     if (p.innerHTML == ""){
         p.innerHTML = ""
+        p2.innerHTML = ""
+
     }else{
         calcular()
     }
@@ -93,6 +130,59 @@ function igual(){
 
 function c(){
     p.innerHTML = ""
+    p2.innerHTML = ""
+
+}
+
+/*Animação*/
+function animarEsquerda(){
+    /*var pos = 0
+    var objeto = document.querySelector(".container-calculadoras")
+    var id = setInterval(frame, 1);
+    function frame(){
+        if(pos == -102){
+            clearInterval(id)
+        } else{
+            pos--
+            objeto.style.left = pos + "%"
+        }
+    }*/
+    document.querySelector(".container-calculadoras").animate([
+        // keyframes
+        { transform: 'translateX(0px)' }, 
+        { transform: 'translateX(-102%)' }
+      ], { 
+        // timing options
+        duration: 1000,
+        iterations: 1,
+        easing: 'cubic-bezier(.59,.12,.35,1.3)',
+        fill: 'forwards'
+      });
+}
+function animarDireita(){
+    /*var pos = -102
+    var objeto = document.querySelector(".container-calculadoras")
+    var id = setInterval(frame, 1);
+    function frame(){
+        if(pos == 0){
+            clearInterval(id)
+        } else{
+            pos++
+            objeto.style.left = pos + "%"
+        }
+    }*/
+
+    document.querySelector(".container-calculadoras").animate([
+        // keyframes
+        { transform: 'translateX(-102%)' }, 
+        { transform: 'translateX(0%)' }
+      ], { 
+        // timing options
+        duration: 1000,
+        iterations: 1,
+        easing: 'cubic-bezier(.59,.12,.35,1.3)',
+        fill: 'forwards'
+      });
 }
 
 
