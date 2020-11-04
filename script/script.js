@@ -207,7 +207,7 @@ function seno(){
 function calcular(){
     a = p2.innerHTML
     if (p2.innerHTML[0] == 's'){
-        b = a.slice(3)
+        b = a.slice(3)*Math.PI/180
         if (b == Math.PI){
             p2.innerHTML = '0'
         } else{p2.innerHTML = Math.sin(b)
