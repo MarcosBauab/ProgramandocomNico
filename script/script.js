@@ -185,6 +185,43 @@ function animarDireita(){
       });
 }
 
+/*Científica*/
+function e(){
+    p2.innerHTML += Math.exp(1)
+}
+
+function pi(){
+    a = Math.PI
+    p2.innerHTML += a
+}
+
+function potencia(){
+    p2.innerHTML += "^"
+}
+
+function seno(){
+    a = p2.innerHTML
+    p2.innerHTML ="sin"
+}
+
+function calcular(){
+    a = p2.innerHTML
+    if (p2.innerHTML[0] == 's'){
+        b = a.slice(3)
+        if (b == Math.PI){
+            p2.innerHTML = '0'
+        } else{p2.innerHTML = Math.sin(b)
+    }}
+
+
+    else{
+    let conts = p2.innerHTML.replace("^","**")
+    var conta = eval(conts)
+    p2.innerHTML = conta
+
+}}
+
+
 
 
 /*function salvar(){
