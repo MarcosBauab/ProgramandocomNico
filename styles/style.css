@@ -60,8 +60,20 @@ main .resultado, main .resultado2{
     transition: .3s;
     width: 22.5%;
 }
-.grid-container a:hover{
+.num:hover{
     background-color: orange !important;
+}
+
+.pontuacao:hover{
+    background-color: aqua;
+}
+
+.sinal:hover{
+    background-color: chartreuse;
+}
+
+.constante:hover{
+    background-color: palevioletred;
 }
 
 a.valorreseta{
@@ -70,6 +82,8 @@ a.valorreseta{
 .valor{
     background: black !important;
 }
+
+
 
 /*Aside*/
 aside#direita{
