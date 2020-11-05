@@ -95,13 +95,21 @@ aside p:hover{
     position: relative;
 }
 
+
+/*Científica*/
 #cientifica{
     position: absolute;
-    right: -70%;
+    right: -102%;
 } 
+#cientifica > main{
+    width: 40%;
+}
+#cientifica > main > .grid-container > a{
+    width: 13%;
+}
 #cientifica aside#esquerda{
     position: absolute;
-    left: -50%;
+    left: 10%;
     top: 50%;
 }
 aside#esquerda p{

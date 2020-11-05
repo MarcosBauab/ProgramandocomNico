@@ -1,5 +1,6 @@
 var p = document.querySelector(".resultado")
 var p2 = document.querySelector(".resultado2")
+var container = document.querySelector(".container-calculadoras")
 document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
     for(var i = 0; i < 10; i++){
@@ -89,14 +90,19 @@ function teclaPressionada(e) {
             break;
         case "Enter":
             calcular()
+            calcularc()
             break;
         
         case "ArrowRight":
-            animarEsquerda()
+            if(container.className == "container-calculadoras esquerda"){
+                animarEsquerda()
+            }
             break;
 
         case "ArrowLeft":
-            animarDireita()
+            if(container.className == "container-calculadoras direita"){
+                animarDireita()
+            }
             break;
 
         default:
@@ -153,7 +159,11 @@ function animarEsquerda(){
             objeto.style.left = pos + "%"
         }
     }*/
-    document.querySelector(".container-calculadoras").animate([
+    if(container.className == "container-calculadoras esquerda"){
+        container.classList.remove("esquerda")
+    }
+    container.classList.add("direita")
+    container.animate([
         // keyframes
         { transform: 'translateX(0px)' }, 
         { transform: 'translateX(-102%)' }
@@ -164,6 +174,7 @@ function animarEsquerda(){
         easing: 'cubic-bezier(.59,.12,.35,1.3)',
         fill: 'forwards'
       });
+      
 }
 function animarDireita(){
     /*var pos = -102
@@ -177,7 +188,10 @@ function animarDireita(){
             objeto.style.left = pos + "%"
         }
     }*/
-
+    if(container.className == "container-calculadoras direita"){
+        container.classList.remove("direita")
+    }
+    container.classList.add("esquerda")
     document.querySelector(".container-calculadoras").animate([
         // keyframes
         { transform: 'translateX(-102%)' }, 

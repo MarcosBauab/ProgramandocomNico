@@ -8,7 +8,7 @@
     <title>Calculadora animada!</title>
 </head>
 <body>
-    <div class="container-calculadoras">
+    <div class="container-calculadoras esquerda">
         <div id="basica">
             <h1 id="titulo">calculadora básica</h1>        
                 <main>  
@@ -44,7 +44,7 @@
                 <aside onclick="animarEsquerda()" id="direita">
                     <p><i class="fas fa-arrows-alt-h"></i></p>
                 </aside>
-            </div>
+        </div>
             <!-- Outra calculadora -->
             <div id="cientifica">
                 <h1 id="titulo">calculadora científica</h1>        
@@ -54,38 +54,45 @@
                 <main>  
                     <p class="resultado2"></p>
                     <div class="grid-container" id="botao" >
-                        <a class="valor7" onclick="escreverc('7')">7</a>
-                        <a class="valor8" onclick="escreverc('8')">8</a>
-                        <a class="valor9" onclick="escreverc('9')">9</a>
-            
-                        <a class="valor" onclick="escreverc('+')">+</a>
-                        <a class="valor4" onclick="escreverc('4')">4</a>
-                        <a class="valor5" onclick="escreverc('5')">5</a>
-                        <a class="valor6" onclick="escreverc('6')">6</a>
-                        <a class="valor" onclick="escreverc('-')">-</a>
-
                         <a class="valor1"  onclick="escreverc('1')">1</a>
                         <a class="valor2" onclick="escreverc('2')">2</a>
                         <a class="valor3"  onclick="escreverc('3')">3</a>
+            
+                        <a class="valor" onclick="escreverc('+')">+</a>
+                        
+                        <a class="valor" onclick="escreverc('-')">-</a>
+
+                        
                         <a class="valor" onclick="escreverc('*')">x</a>
-                        <a class="valorc" onclick="c()">C</a>
-                        <a class="zero" onclick="escreverc('0')">0</a>
-
-                        <a class='ponto' onclick="escreverc('.')"><strong>.</strong> </a>
-
                         <a class="valor" onclick="escreverc('/')"><i class="fas fa-divide"></i></a>
-                        <a class="apagar" onclick="apagar()"> del</a>
-
-                        <a class="valorreseta" onclick="igualc()" style="width:190px;">=</a>
-                        <a class = 'potencia' onclick="potencia()">^</a> 
+                        <a class="valor4" onclick="escreverc('4')">4</a>
+                        <a class="valor5" onclick="escreverc('5')">5</a>
+                        <a class="valor6" onclick="escreverc('6')">6</a>
                         <a class='seno' onclick="seno()">sin</a>
+                        
+
                         <a class='cosseno' onclick="cos()">cos</a>
+                        
                         <a class='tangente' onclick="tan()">tan</a>
+                        <a class="valorc" onclick="c()">C</a>
+                        <a class="valor7" onclick="escreverc('7')">7</a>
+                        <a class="valor8" onclick="escreverc('8')">8</a>
+                        <a class="valor9" onclick="escreverc('9')">9</a>
+                        
 
                         <a class='pi' onclick="pi('&#960')">&#960</a>
-                        <a class='e' onclick = "e()">e</a>
-                        <a class='log' onclick = "log()"> log</a>
                         <a class='ln' onclick = "ln()"> ln</a>
+                        <a class='log' onclick = "log()"> log</a>
+                        <a class="apagar" onclick="apagar()"> del</a>
+                        
+                        <a class = 'potencia' onclick="potencia()">^</a>
+                        
+                        <a class="zero" onclick="escreverc('0')">0</a> 
+                        <a class='ponto' onclick="escreverc('.')"><strong>.</strong> </a>
+                        
+                        <a class='e' onclick = "e()">e</a>
+                        
+                        <a class="valorreseta" onclick="igualc()" style="width:207px;">=</a>
                     </div>
                 </main>
             </div>
