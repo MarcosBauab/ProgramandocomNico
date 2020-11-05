@@ -13,7 +13,7 @@
             <h1 id="titulo">calculadora básica</h1>        
                 <main>  
                     <p class="resultado"></p>
-                    <div class="grid-container" id="botao" >
+                    <div class="grid-container" >
                         <a class="num" onclick="escrever('7')">7</a>
                         <a class="num" onclick="escrever('8')">8</a>
                         <a class="num" onclick="escrever('9')">9</a>
@@ -29,9 +29,10 @@
                         <a class="num"  onclick="escrever('3')">3</a>
                         <a class="sinal" onclick="escrever('*')">x</a>
                         <a class="pontuacao" onclick="c()">C</a>
-                        <a class="num" onclick="escrever('0')">0</a>
 
                         <a class='pontuacao' onclick="escrever('.')"><strong>.</strong> </a>
+                        <a class="num" onclick="escrever('0')">0</a>
+
 
                         <a class="sinal" onclick="escrever('/')"><i class="fas fa-divide"></i></a>
                         <a class="pontuacao" onclick="apagar()"> del</a>
@@ -53,7 +54,7 @@
                 </aside>
                 <main>  
                     <p class="resultado2"></p>
-                    <div class="grid-container" id="botao" >
+                    <div class="grid-container">
                         <a class="num"  onclick="escreverc('1')">1</a>
                         <a class="num" onclick="escreverc('2')">2</a>
                         <a class="num"  onclick="escreverc('3')">3</a>
@@ -79,20 +80,22 @@
                         <a class="num" onclick="escreverc('8')">8</a>
                         <a class="num" onclick="escreverc('9')">9</a>
                         
+                        <a class = 'sinal' onclick="potencia()">^</a>
 
-                        <a class='constante' onclick="pi('&#960')">&#960</a>
                         <a class='sinal' onclick = "ln()"> ln</a>
                         <a class='sinal' onclick = "log()"> log</a>
                         <a class="pontuacao" onclick="apagar()"> del</a>
                         
-                        <a class = 'sinal' onclick="potencia()">^</a>
                         
-                        <a class="num" onclick="escreverc('0')">0</a> 
-                        <a class='pontuacao' onclick="escreverc('.')"><strong>.</strong> </a>
-                        
+                        <a class='constante' onclick="pi('&#960')">&#960</a>
                         <a class='constante' onclick = "e()">e</a>
-                        
+
+                        <a class="num" onclick="escreverc('0')">0</a> 
+
                         <a class="valorreseta" onclick="igualc()" style="width:207px;">=</a>
+                        
+                        
+                        <a class='pontuacao' onclick="escreverc('.')"><strong>.</strong> </a>
                     </div>
                 </main>
             </div>

@@ -3,13 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: verdana;
-}
+}/*rgba(192, 69, 230, 0.699),rgba(228, 116, 64, 0.801)*/
 html{
     height: 100%;
 }
 body{
-    background: linear-gradient(rgba(192, 69, 230, 0.699),rgba(228, 116, 64, 0.801));
-    height: 100%;
+    background: linear-gradient(to bottom, rgba(192, 69, 230, 0.699) ,rgba(228, 116, 64, 0.801) );
+   
     overflow: hidden;
 }
 #titulo{
@@ -32,6 +32,7 @@ main{
     padding: 20px 20px 20px 20px;
     border-radius: 8px;
     min-height: 350px;
+    flex-wrap: wrap;
 }
 main .resultado, main .resultado2{
     background-color: rgba(133, 197, 133, 0.815);
@@ -53,35 +54,53 @@ main .resultado, main .resultado2{
 .grid-container a{
     padding: 10px;
     cursor: pointer;
-    background-color: rgb(116, 116, 116);
     border-radius: 5px;
     color: white;
     font-size: 20px;
     transition: .3s;
     width: 22.5%;
 }
-.num:hover{
+
+div.grid-container a.num{
+    background-color: rgb(116, 116, 116);
+}
+div.grid-container a.num:hover{
     background-color: orange !important;
 }
-
-.pontuacao:hover{
+div.grid-container a.pontuacao{
+    background-color: rgba(0, 255, 255, 0.384);
+}
+div.grid-container a.pontuacao:hover{
     background-color: aqua;
 }
-
-.sinal:hover{
+div.grid-container a.sinal {
+    background-color: rgba(128, 255, 0, 0.445);
+}
+div.grid-container a.sinal:hover{
     background-color: chartreuse;
 }
-
-.constante:hover{
+div.grid-container a.constante{
+    background-color: rgba(216, 112, 147, 0.397);
+}
+div.grid-container a.constante:hover{
     background-color: palevioletred;
 }
 
-a.valorreseta{
-    background: orange;
+div.grid-container a.valorreseta{
+    background: rgba(255, 166, 0, 0.568);
 }
-.valor{
-    background: black !important;
+div.grid-container a.valorreseta:hover{
+    background-color: orange;
 }
+
+/*Divisão de classes
+div.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+}*/
+
 
 
 
@@ -114,6 +133,7 @@ aside p:hover{
 #cientifica{
     position: absolute;
     right: -102%;
+    min-width: 300px;
 } 
 #cientifica > main{
     width: 40%;
@@ -133,4 +153,34 @@ aside#esquerda p{
     border-radius: 8px;
     padding: 10px;
     transition: .3s;
+}
+
+
+/*Responsivo*/
+@media (max-width: 1200px){
+    html{
+        height: 180%;
+    }
+    body{
+        overflow-y: auto;
+    }
+    
+    #cientifica{
+        right: 50%;
+        transform: translateX(50%);
+        top: 100%;
+        width: 53% ;
+    }
+    #cientifica > main{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #cientifica > main > .grid-container > a{
+        width: 14%;
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+    aside{
+        display: none;
+    }
 }
