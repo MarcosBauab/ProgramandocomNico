@@ -89,8 +89,14 @@ function teclaPressionada(e) {
 
             break;
         case "Enter":
-            calcular()
-            calcularc()
+
+            
+            if(container.className == "container-calculadoras direita"){
+                calcularc()
+            } else {
+                calcular()
+            }
+            
             break;
         
         case "ArrowRight":
