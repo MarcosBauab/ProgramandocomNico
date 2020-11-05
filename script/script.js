@@ -100,14 +100,15 @@ function teclaPressionada(e) {
 function calcular(){
     var conta = eval(p.innerHTML)
     p.innerHTML = conta
-    p2.innerHTML = conta
-
 }
 
 function escrever(num){
     p.innerHTML += num
-    p2.innerHTML += num
 
+}
+
+function escreverc(num){
+    p2.innerHTML += num
 }
 
 function apagar(){
@@ -119,13 +120,11 @@ function apagar(){
 }
 
 function igual(){
-    if (p.innerHTML == ""){
-        p.innerHTML = ""
-        p2.innerHTML = ""
+    calcular()
+}
 
-    }else{
-        calcular()
-    }
+function igualc(){
+    calcularc()
 }
 
 function c(){
@@ -199,29 +198,78 @@ function potencia(){
     p2.innerHTML += "^"
 }
 
+function log(){
+    p2.innerHTML = 'log'
+}
+
+function ln(){
+    p2.innerHTML = 'ln'
+}
+
 function seno(){
     a = p2.innerHTML
     p2.innerHTML ="sin"
 }
 
-function calcular(){
+function cos(){
     a = p2.innerHTML
-    if (p2.innerHTML[0] == 's'){
-        b = a.slice(3)*Math.PI/180
-        if (b == Math.PI){
+    p2.innerHTML ="cos"
+}
+function tan(){
+    a = p2.innerHTML
+    p2.innerHTML ="tan"
+}
+function calcularc(){
+    a = p2.innerHTML
+
+    if (p2.innerHTML[0] == 's')
+    {
+        let c = a.slice(3)*Math.PI/180
+        if (Math.sin(c) < 0.0000001){
             p2.innerHTML = '0'
-        } else{p2.innerHTML = Math.sin(b)
+        }else{
+        p2.innerHTML = Math.sin(c)
     }}
 
+    else if (p2.innerHTML[0] == 'c')
+    {
+        let c = a.slice(3)*Math.PI/180
+        if (Math.cos(c) < 0.0000001){
+            p2.innerHTML = '0'
+        }else{
+        p2.innerHTML = Math.cos(c)
+    }}
+
+    else if (p2.innerHTML[0] == 't')
+    {
+        let c = a.slice(3)*Math.PI/180
+        if (Math.tan(c) < 0.0000001){
+            p2.innerHTML = '0'
+        }else{
+        p2.innerHTML = Math.tan(c)
+    }}
+
+    else if (p2.innerHTML[1] == 'o'){
+        b = a.slice(3)
+        p2.innerHTML = Math.log10(b)
+    }
+
+    else if (p2.innerHTML[1] == 'n'){
+        b = a.slice(2)
+        if (b == Math.exp(1)){
+            p2.innerHTML = '1'
+        }
+        else{
+        p2.innerHTML = Math.log(b)}
+    }
 
     else{
     let conts = p2.innerHTML.replace("^","**")
     var conta = eval(conts)
     p2.innerHTML = conta
 
+
 }}
-
-
 
 
 /*function salvar(){
