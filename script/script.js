@@ -91,7 +91,14 @@ function teclaPressionada(e) {
             calcular()
             break;
         
-        
+        case "ArrowRight":
+            animarEsquerda()
+            break;
+
+        case "ArrowLeft":
+            animarDireita()
+            break;
+
         default:
             break;
     }  
