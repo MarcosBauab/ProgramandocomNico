@@ -5,87 +5,88 @@ document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
     for(var i = 0; i < 10; i++){
         if(e.code == `Numpad${i}`){
-            p.innerHTML += `${i}`
-            p2.innerHTML += `${i}`
+            p.value = `${i}`
+            p2.value += `${i}`
 
         }
         if(e.code == `Digit${i}`){
-            p2.innerHTML += `${i}`
-            p.innerHTML += `${i}`
+            p2.value += `${i}`
+            p.value += `${i}`
         }
     } 
- 
+
+
    switch (e.code) {
         case "NumpadMultiply":
-            p.innerHTML += `*`
-            p2.innerHTML += `*`
+            p.value += `*`
+            p2.value += `*`
 
             break;
         case "NumpadSubtract":
-            p.innerHTML += `-`
-            p2.innerHTML += `-`
+            p.value += `-`
+            p2.value += `-`
 
             break;
         case "NumpadDivide":
-            p.innerHTML += `/`
-            p2.innerHTML += `/`
+            p.value += `/`
+            p2.value += `/`
 
             break;
         
         case "NumpadAdd":
-            p.innerHTML += `+`
-            p2.innerHTML += `+`
+            p.value += `+`
+            p2.value += `+`
 
             break;
         
         case "NumpadComma":
-            p.innerHTML += `.`
-            p2.innerHTML += `.`
+            p.value += `.`
+            p2.value += `.`
 
             break;
         
         case "NumpadDecimal":
-            p.innerHTML += `.`
-            p2.innerHTML += `.`
+            p.value += `.`
+            p2.value += `.`
 
             break;
         
         case "Digitc":
-            p.innerHTML += ``
-            p2.innerHTML += ``
+            p.value += ``
+            p2.value += ``
 
             break;
         case "DigitC":
-            p.innerHTML += ``
-            p2.innerHTML += ``
+            p.value += ``
+            p2.value += ``
 
             break;
             
         case "NumpadAdd":
-            p.innerHTML += `+`
-            p2.innerHTML += `+`
+            p.value += `+`
+            p2.value += `+`
 
             break;
         case "NumpadComma":
-            p.innerHTML += `.`
-            p2.innerHTML += `.`
+            p.value += `.`
+            p2.value += `.`
 
             break;
         case "NumpadDecimal":
-            p.innerHTML += `.`
-            p2.innerHTML += `.`
+            p.value += `.`
+            p2.value += `.`
 
             break;
         case "KeyC":
-            p.innerHTML = ``
-            p2.innerHTML = ``
+            p.value = ``
+            p2.value = ``
 
             break;
         case "Backspace":
-            var myStr = p.innerHTML
+            var myStr = p.value
             myStr = myStr.slice(0, -1);
-            p.innerHTML = myStr
-            p2.innerHTML = myStr
+            p.value = myStr
+            p2.value = myStr
 
             break;
         case "Enter":
@@ -117,38 +118,42 @@ function teclaPressionada(e) {
 }
 
 function calcular(){
-    var conta = eval(p.innerHTML)
-    p.innerHTML = conta
+    var conta = eval(p.value)
+    p.value = conta
 }
 
 function escrever(num){
-    p.innerHTML += num
+    p.value += num
 
 }
 
 function escreverc(num){
-    p2.innerHTML += num
+    p2.value += num
 }
 
 function apagar(){
-    let texto = p.innerHTML
-    texto = texto.slice(0,-1)
-    p.innerHTML = texto
-    p2.innerHTML = texto
+    texto = p.value.slice(0,-1)
+    texto2 = p2.value.slice(0,-1)
+    p.value = texto
+    p2.value = texto2
 
 }
 
 function igual(){
+    if (p.value == ''){
+        p.value = '0'
+    }
+    else{
     calcular()
-}
+}}
 
 function igualc(){
     calcularc()
 }
 
 function c(){
-    p.innerHTML = ""
-    p2.innerHTML = ""
+    p.value = ""
+    p2.value = ""
 
 }
 
@@ -213,87 +218,87 @@ function animarDireita(){
 
 /*Científica*/
 function e(){
-    p2.innerHTML += Math.exp(1)
+    p2.value += Math.exp(1)
 }
 
 function pi(){
     a = Math.PI
-    p2.innerHTML += a
+    p2.value += a
 }
 
 function potencia(){
-    p2.innerHTML += "^"
+    p2.value += "^"
 }
 
 function log(){
-    p2.innerHTML = 'log'
+    p2.value = 'log'
 }
 
 function ln(){
-    p2.innerHTML = 'ln'
+    p2.value = 'ln'
 }
 
 function seno(){
-    a = p2.innerHTML
-    p2.innerHTML ="sin"
+    a = p2.value
+    p2.value ="sin"
 }
 
 function cos(){
-    a = p2.innerHTML
-    p2.innerHTML ="cos"
+    a = p2.value
+    p2.value ="cos"
 }
 function tan(){
-    a = p2.innerHTML
-    p2.innerHTML ="tan"
+    a = p2.value
+    p2.value ="tan"
 }
 function calcularc(){
-    a = p2.innerHTML
+    a = p2.value
 
-    if (p2.innerHTML[0] == 's')
+    if (p2.value[0] == 's')
     {
         let c = a.slice(3)*Math.PI/180
         if (Math.sin(c) < 0.0000001){
-            p2.innerHTML = '0'
+            p2.value = '0'
         }else{
-        p2.innerHTML = Math.sin(c)
+        p2.value = Math.sin(c)
     }}
 
-    else if (p2.innerHTML[0] == 'c')
+    else if (p2.value[0] == 'c')
     {
         let c = a.slice(3)*Math.PI/180
         if (Math.cos(c) < 0.0000001){
-            p2.innerHTML = '0'
+            p2.value = '0'
         }else{
-        p2.innerHTML = Math.cos(c)
+        p2.value = Math.cos(c)
     }}
 
-    else if (p2.innerHTML[0] == 't')
+    else if (p2.value[0] == 't')
     {
         let c = a.slice(3)*Math.PI/180
         if (Math.tan(c) < 0.0000001){
-            p2.innerHTML = '0'
+            p2.value = '0'
         }else{
-        p2.innerHTML = Math.tan(c)
+        p2.value = Math.tan(c)
     }}
 
-    else if (p2.innerHTML[1] == 'o'){
+    else if (p2.value[1] == 'o'){
         b = a.slice(3)
-        p2.innerHTML = Math.log10(b)
+        p2.value = Math.log10(b)
     }
 
-    else if (p2.innerHTML[1] == 'n'){
+    else if (p2.value[1] == 'n'){
         b = a.slice(2)
         if (b == Math.exp(1)){
-            p2.innerHTML = '1'
+            p2.value = '1'
         }
         else{
-        p2.innerHTML = Math.log(b)}
+        p2.value = Math.log(b)}
     }
 
     else{
-    let conts = p2.innerHTML.replace("^","**")
+    let conts = p2.value.replace("^","**")
     var conta = eval(conts)
-    p2.innerHTML = conta
+    p2.value = conta
 
 
 }}
@@ -324,21 +329,21 @@ console.log(numero)
 
 
 /*function teclaPressionada(e) {
-    //p.innerHTML += `${e.code}`
+    //p.value += `${e.code}`
     for(var i = 0; i < 10; i++){
         if(e.code == `Numpad${i}`){
-            p.innerHTML += `${i}`
+            p.value += `${i}`
         }
         if(e.code == `Digit${i}`){
-            p.innerHTML += `${i}`
+            p.value += `${i}`
         }
     } 
     switch (e.code) {
         case "NumpadMultiply":
-            p.innerHTML += `*`
+            p.value += `*`
             break;
         case "Backspace":
-            p.innerHTML -= `*`
+            p.value -= `*`
             break;
         
         
