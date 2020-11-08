@@ -1,9 +1,10 @@
 var p = document.querySelector(".resultado")
 var p2 = document.querySelector(".resultado2")
 var container = document.querySelector(".container-calculadoras")
+
 document.addEventListener("keydown", teclaPressionada)
 function teclaPressionada(e) {
-    for(var i = 0; i < 10; i++){
+    /*for(var i = 0; i < 10; i++){
         if(e.code == `Numpad${i}`){
             p.value = `${i}`
             p2.value += `${i}`
@@ -13,11 +14,11 @@ function teclaPressionada(e) {
             p2.value += `${i}`
             p.value += `${i}`
         }
-    } 
+    } */
 
 
    switch (e.code) {
-        case "NumpadMultiply":
+        /*case "NumpadMultiply":
             p.value += `*`
             p2.value += `*`
 
@@ -88,7 +89,7 @@ function teclaPressionada(e) {
             p.value = myStr
             p2.value = myStr
 
-            break;
+            break;*/
         case "Enter":
 
             
