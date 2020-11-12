@@ -303,7 +303,9 @@ function calcularc(){
 
 
 }}
-
+/*function random(){
+    p2.value = Math.floor(Math.random()*100)
+}*/
 
 /*function salvar(){
     resultado = input.value

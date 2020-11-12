@@ -60,7 +60,12 @@ main .resultado, main .resultado2{
     transition: .3s;
     width: 22.5%;
 }
-
+/*div.grid-container a#random{
+    background-color: rgba(0, 0, 0, 0.336);
+}
+div.grid-container a#random:hover{
+    background-color: rgba(0, 0, 0, 0.74);
+}*/
 div.grid-container a.num{
     background-color: rgb(116, 116, 116);
 }
@@ -154,7 +159,6 @@ aside#esquerda p{
     padding: 10px;
     transition: .3s;
 }
-
 
 /*Responsivo*/
 @media (max-width: 1200px){
