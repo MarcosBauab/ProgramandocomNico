@@ -325,6 +325,21 @@ function calcularc(){
 
 }
 
+
+*/
+
+function random(){
+    var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*"
+    var senha = []
+    for (let i = 0; i < 10; i++){
+        senha.push(caracteres[Math.floor(Math.random()*(caracteres.length+1))])
+    }
+    p2.value = senha.join('')
+}
+
+/*
+
+
 console.log(operador)
 console.log(contador)
 console.log(numero)
