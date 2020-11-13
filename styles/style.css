@@ -60,11 +60,24 @@ main .resultado, main .resultado2{
     transition: .3s;
     width: 22.5%;
 }
-/*div.grid-container a#random{
+div.grid-container a#random{
     background-color: rgba(0, 0, 0, 0.336);
 }
+/*.overlay{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: .5s ease;
+}*/
 div.grid-container a#random:hover{
     background-color: rgba(0, 0, 0, 0.74);
+}
+/*div.grid-container .container:hover div.overlay{
+    opacity: 1;
 }*/
 div.grid-container a.num{
     background-color: rgb(116, 116, 116);
