@@ -177,7 +177,7 @@ function animarEsquerda(){
     container.classList.add("direita")
     container.animate([
         // keyframes
-        { transform: 'translateX(0px)' }, 
+         
         { transform: 'translateX(-102%)' }
       ], { 
         // timing options
@@ -206,7 +206,7 @@ function animarDireita(){
     container.classList.add("esquerda")
     document.querySelector(".container-calculadoras").animate([
         // keyframes
-        { transform: 'translateX(-102%)' }, 
+     
         { transform: 'translateX(0%)' }
       ], { 
         // timing options
@@ -330,8 +330,9 @@ function calcularc(){
 
 function random(){
     var caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*"
+    let tamanho = document.querySelector("#senha").value
     var senha = []
-    for (let i = 0; i < 10; i++){
+    for (let i = 0; i < tamanho; i++){
         senha.push(caracteres[Math.floor(Math.random()*(caracteres.length+1))])
     }
     p2.value = senha.join('')
