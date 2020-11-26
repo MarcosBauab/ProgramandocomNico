@@ -205,6 +205,22 @@ aside#esquerda p{
     padding: 10px;
     transition: .3s;
 }
+/*Histórico*/
+p.historico{
+    position: relative;
+    top: -50vh;
+    left: -20vw;
+    background-color: grey;
+    width: 200px;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+
+    opacity: 0;
+}
 
 /*Responsivo*/
 @media (max-width: 1200px){
